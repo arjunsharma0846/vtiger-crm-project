@@ -17,19 +17,29 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
+import generic_utility.FileUtility;
+
 public class CreateOrgTest {
 	public static void main(String[] args) throws InterruptedException, IOException {
 		
-		FileInputStream fis = new FileInputStream("D:\\OOP\\vtiger-crm-framework-A11\\src\\test\\resources\\commondata.properties");
-		Properties pObj = new Properties();
-		pObj.load(fis);
+		FileUtility fUtil = new FileUtility();
 		
-		String BROWSER = pObj.getProperty("bro");
-		String URL = pObj.getProperty("url");
-		String USERNAME = pObj.getProperty("un");
-		String PASSWORD = pObj.getProperty("pwd");
+		String BROWSER = fUtil.getDataFromPropertiesFile("bro");
+		String URL = fUtil.getDataFromPropertiesFile("url");
+		String USERNAME = fUtil.getDataFromPropertiesFile("un");
+		String PASSWORD = fUtil.getDataFromPropertiesFile("pwd");
 		
-        FileInputStream fis2 = new FileInputStream("D:\\OOP\\vtiger-crm-framework-A11\\src\\test\\resources\\testScriptData.xlsx");
+		String orgName = fUtil.getStringDataFromExcelFile("orgName", 2, 0) + (int)(Math.random()*9999);
+		System.out.println(orgName);
+		
+		String value1 =fUtil.getNumericDataFromExcelFile("orgName", 1, 1);
+		System.out.println(value1);
+		
+		
+		String expRating = fUtil.getStringDataFromExcelFile("orgName", 2, 2);
+		System.out.println(expRating);
+		
+ /*      FileInputStream fis2 = new FileInputStream("D:\\OOP\\vtiger-crm-framework-A11\\src\\test\\resources\\testScriptData.xlsx");
 		
 		Workbook wb = WorkbookFactory.create(fis2);
 		
@@ -38,11 +48,16 @@ public class CreateOrgTest {
 		String orgName = sh.getRow(2).getCell(0).getStringCellValue() + (int) (Math.random() * 9999);
 		System.out.println(orgName);
 		
+		
 		double phnnum = sh.getRow(2).getCell(1).getNumericCellValue();
-		System.out.println(phnnum);
+		long phnnumLong = (long) phnnum;
+		String phnnumString = String.valueOf(phnnumLong);
+		System.out.println(phnnumString);
+		
 		
 		String expRating = sh.getRow(2).getCell(2).getStringCellValue();
 		System.out.println(expRating);
+*/
 		
 		
 		
@@ -109,7 +124,7 @@ public class CreateOrgTest {
 		}
 		
 		String phoneName = driver.findElement(By.id("dtlview_Phone")).getText();
-		if (phoneName.equals(phnnum)) {
+		if (phoneName.equals(value1)) {
 			System.out.println("Phone:"+phoneName);
 		}else {
 			System.out.println("Incorrect phone number!!!");
