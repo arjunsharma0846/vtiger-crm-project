@@ -21,6 +21,7 @@ public class CreateEmail {
 		
 		driver.get("http://localhost:8888/");
 		
+		
 		//login
 		
 		WebElement username = driver.findElement(By.name("user_name"));
