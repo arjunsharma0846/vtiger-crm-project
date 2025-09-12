@@ -1,26 +1,27 @@
 package organization;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.Properties;
 
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
 
 import generic_utility.FileUtility;
+import generic_utility.WebDriverUtility;
+import object_repository.HomePage;
+import object_repository.LoginPage;
+import object_repository.OrgPage;
 
 public class CreateOrgTest {
-	public static void main(String[] args) throws InterruptedException, IOException {
+	
+	@Test
+	public void createOrgTest() throws IOException, InterruptedException {
 		
 		FileUtility fUtil = new FileUtility();
 		
@@ -80,23 +81,41 @@ public class CreateOrgTest {
 		
 		//login
 		
-		WebElement username = driver.findElement(By.name("user_name"));
-		WebElement password = driver.findElement(By.name("user_password"));
+		LoginPage lp = new LoginPage(driver);
 		
-		username.sendKeys(USERNAME);
-		password.sendKeys(PASSWORD);
+		lp.loginToCRM(USERNAME, PASSWORD);
 		
-		driver.findElement(By.id("submitButton")).click();
+		
+	//	username.sendKeys(USERNAME);
+	//	password.sendKeys(PASSWORD);
+	//	loginBtn.click();
+		
+	//	WebElement username = driver.findElement(By.name("user_name"));
+	//	WebElement password = driver.findElement(By.name("user_password"));
+		
+	//	username.sendKeys(USERNAME);
+	//	password.sendKeys(PASSWORD);
+		
+	//	driver.findElement(By.id("submitButton")).click();
 		
 		
 		//create Organization
 		
-		driver.findElement(By.linkText("Organizations")).click();
-		driver.findElement(By.cssSelector("img[title='Create Organization...']")).click();
+	//	driver.findElement(By.linkText("Organizations")).click();
+		
+		HomePage hp = new HomePage(driver);
+		hp.getOrgLink().click();
+		
+		OrgPage op = new OrgPage(driver);
+		op.getPlusIcon().click();
+		WebElement orgField = op.getOrgNameField();
+		orgField.sendKeys(orgName);
+		
+//		driver.findElement(By.cssSelector("img[title='Create Organization...']")).click();
 		
 //		String orgName ="qspider_"+(int)(Math.random()*9999);
-		WebElement orgField = driver.findElement(By.name("accountname"));
-		orgField.sendKeys(orgName);
+//		WebElement orgField = driver.findElement(By.name("accountname"));
+//		orgField.sendKeys(orgName);
 		
 //		String phnnum ="+91"+(long)(Math.random()*999999999);
 		WebElement phonefield = driver.findElement(By.id("phone"));
@@ -143,13 +162,16 @@ public class CreateOrgTest {
 		
 		//logout
 		
-		WebElement profile =driver.findElement(By.cssSelector("img[src='themes/softed/images/user.PNG']"));
+	//	WebElement profile =driver.findElement(By.cssSelector("img[src='themes/softed/images/user.PNG']"));
+		WebElement profile = hp.getProfile();
 		
+		WebDriverUtility wdUtil = new WebDriverUtility(driver);
+
+		wdUtil.hover(profile);
 		
-		Actions act = new Actions(driver);
-		act.moveToElement(profile).build().perform();
+		hp.getSignOut().click();
 		
-		driver.findElement(By.linkText("Sign Out")).click();
+	//	driver.findElement(By.linkText("Sign Out")).click();
 		
 		Thread.sleep(3000);
 		driver.quit();

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[This is case 1]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2025-09-12T10:04:11 IST" name="Default suite" finished-at="2025-09-12T10:04:11 IST" duration-ms="123">
+    <groups>
+    </groups>
+    <test started-at="2025-09-12T10:04:11 IST" name="Default test" finished-at="2025-09-12T10:04:11 IST" duration-ms="123">
+      <class name="extra.Demo">
+        <test-method signature="case1()[pri:0, instance:extra.Demo@55182842]" started-at="2025-09-12T10:04:11 IST" name="case1" finished-at="2025-09-12T10:04:11 IST" duration-ms="14" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[This is case 1]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- case1 -->
+        <test-method signature="case2()[pri:0, instance:extra.Demo@55182842]" started-at="2025-09-12T10:04:11 IST" name="case2" finished-at="2025-09-12T10:04:11 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- case2 -->
+        <test-method signature="case3()[pri:0, instance:extra.Demo@55182842]" started-at="2025-09-12T10:04:11 IST" name="case3" finished-at="2025-09-12T10:04:11 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- case3 -->
+      </class> <!-- extra.Demo -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
