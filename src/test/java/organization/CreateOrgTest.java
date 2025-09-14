@@ -111,6 +111,13 @@ public class CreateOrgTest {
 		WebElement orgField = op.getOrgNameField();
 		orgField.sendKeys(orgName);
 		
+		WebElement phonefield =op.getphonefield();
+		phonefield.sendKeys("9897247672");
+		
+		WebElement rating = op.getrating();
+		
+		op.getSaveBtn().click();
+		
 //		driver.findElement(By.cssSelector("img[title='Create Organization...']")).click();
 		
 //		String orgName ="qspider_"+(int)(Math.random()*9999);
@@ -118,10 +125,10 @@ public class CreateOrgTest {
 //		orgField.sendKeys(orgName);
 		
 //		String phnnum ="+91"+(long)(Math.random()*999999999);
-		WebElement phonefield = driver.findElement(By.id("phone"));
-		phonefield.sendKeys("9897247672");
+//		WebElement phonefield = driver.findElement(By.id("phone"));
+//		phonefield.sendKeys("9897247672");
 		
-		WebElement rating = driver.findElement(By.name("rating"));
+//		WebElement rating = driver.findElement(By.name("rating"));
 		
 		
 //		String expRating ="Project Cancelled";
@@ -130,7 +137,7 @@ public class CreateOrgTest {
 		
 //		WebElement sel1 =selrating.getFirstSelectedOption();
 		
-		driver.findElement(By.xpath("//input[@value='  Save  ']")).click();
+//		driver.findElement(By.xpath("//input[@value='  Save  ']")).click();
 		
 //		Verification
 		

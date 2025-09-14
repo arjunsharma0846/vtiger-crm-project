@@ -15,6 +15,20 @@ public class OrgPage {
 
 	@FindBy(name = "accountname")
 	private WebElement orgNameField;
+	
+	@FindBy(id = "phone")
+	private WebElement phonefield;
+	
+	@FindBy(name = "rating")
+	private WebElement rating;
+	
+	public WebElement getphonefield() {
+		return phonefield;
+	}
+	
+	public WebElement getrating() {
+		return rating;
+	}
 
 	@FindBy(xpath = "//input[@value='  Save  ']")
 	private WebElement saveBtn;

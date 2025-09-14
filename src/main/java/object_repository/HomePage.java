@@ -18,6 +18,13 @@ public class HomePage {
 		return orgLink;
 	}
 	
+	@FindBy(linkText ="Trouble Tickets")
+	private WebElement TTlink;
+	
+	public WebElement getTTlink() {
+		return TTlink;
+	}
+	
 	@FindBy(css = "img[src='themes/softed/images/user.PNG']")
 	private WebElement profile;
 	

@@ -1,31 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
-    <line>
-      <![CDATA[This is case 1]]>
-    </line>
   </reporter-output>
-  <suite started-at="2025-09-12T10:04:11 IST" name="Default suite" finished-at="2025-09-12T10:04:11 IST" duration-ms="123">
+  <suite started-at="2025-09-14T13:38:25 IST" name="Default suite" finished-at="2025-09-14T13:38:46 IST" duration-ms="20434">
     <groups>
     </groups>
-    <test started-at="2025-09-12T10:04:11 IST" name="Default test" finished-at="2025-09-12T10:04:11 IST" duration-ms="123">
-      <class name="extra.Demo">
-        <test-method signature="case1()[pri:0, instance:extra.Demo@55182842]" started-at="2025-09-12T10:04:11 IST" name="case1" finished-at="2025-09-12T10:04:11 IST" duration-ms="14" status="PASS">
+    <test started-at="2025-09-14T13:38:25 IST" name="Default test" finished-at="2025-09-14T13:38:46 IST" duration-ms="20434">
+      <class name="testNg_extra.SauceDemo">
+        <test-method signature="loginToSauceDemo(java.lang.String,java.lang.String)[pri:0, instance:testNg_extra.SauceDemo@6b2ea799]" started-at="2025-09-14T13:38:25 IST" name="loginToSauceDemo" data-provider="getData" finished-at="2025-09-14T13:38:30 IST" duration-ms="4757" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
-            <line>
-              <![CDATA[This is case 1]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- case1 -->
-        <test-method signature="case2()[pri:0, instance:extra.Demo@55182842]" started-at="2025-09-12T10:04:11 IST" name="case2" finished-at="2025-09-12T10:04:11 IST" duration-ms="3" status="PASS">
+        </test-method> <!-- loginToSauceDemo -->
+        <test-method signature="loginToSauceDemo(java.lang.String,java.lang.String)[pri:0, instance:testNg_extra.SauceDemo@6b2ea799]" started-at="2025-09-14T13:38:30 IST" name="loginToSauceDemo" data-provider="getData" finished-at="2025-09-14T13:38:33 IST" duration-ms="3221" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[locked_out_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- case2 -->
-        <test-method signature="case3()[pri:0, instance:extra.Demo@55182842]" started-at="2025-09-12T10:04:11 IST" name="case3" finished-at="2025-09-12T10:04:11 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- loginToSauceDemo -->
+        <test-method signature="loginToSauceDemo(java.lang.String,java.lang.String)[pri:0, instance:testNg_extra.SauceDemo@6b2ea799]" started-at="2025-09-14T13:38:33 IST" name="loginToSauceDemo" data-provider="getData" finished-at="2025-09-14T13:38:37 IST" duration-ms="3291" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[problem_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- case3 -->
-      </class> <!-- extra.Demo -->
+        </test-method> <!-- loginToSauceDemo -->
+        <test-method signature="loginToSauceDemo(java.lang.String,java.lang.String)[pri:0, instance:testNg_extra.SauceDemo@6b2ea799]" started-at="2025-09-14T13:38:37 IST" name="loginToSauceDemo" data-provider="getData" finished-at="2025-09-14T13:38:46 IST" duration-ms="9088" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[performance_glitch_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToSauceDemo -->
+      </class> <!-- testNg_extra.SauceDemo -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
