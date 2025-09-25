@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Suite">
+	<groups>
+		<run>
+			<include name="reg" />
+	<!--<exclude name="reg" /> -->		
+		</run>
+	</groups>
+	<test name="Test">
+		<classes>
+			<class name="typesOfExecutions.Demo4Test" />
+			<class name="typesOfExecutions.Demo5Test" />
+		</classes>
+	</test>
+</suite> 

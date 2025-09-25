@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite parallel="tests" name="Suite">
+  <test  parallel="tests" name="TestRunner1">
+    <parameter name="bro" value="Firefox"/>
+    <classes>
+      <class name="typesOfExecutions.Demo1Test"/>
+    </classes>
+  </test>
+  
+  <test  parallel="tests" name="TestRunner2">
+    <parameter name="bro" value="Chrome"/>
+    <classes>
+      <class name="typesOfExecutions.Demo2Test"/>
+    </classes>
+  </test>
+  
+  <test  parallel="tests" name="TestRunner3">
+    <parameter name="bro" value="Firefox"/>
+    <classes>
+      <class name="typesOfExecutions.Demo3Test"/>
+    </classes>
+  </test>
+   
+</suite> 

@@ -10,7 +10,7 @@ public class DemoForIgnoringTestCases {
 		System.out.println("Logged in");
 	}
 
-	@Test(alwaysRun = true,enabled = true)
+	@Test(enabled = false ,alwaysRun = true)
 	public void search() {
 		System.out.println("Searched watch");
 	}

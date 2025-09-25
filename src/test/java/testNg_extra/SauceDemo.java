@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class SauceDemo {
@@ -33,7 +34,7 @@ public class SauceDemo {
 	}
 	
 	
-	@org.testng.annotations.DataProvider
+	@DataProvider
 	public Object[][] getData(){
 		
 		Object[][] credentials = new Object[4][2];

@@ -39,7 +39,7 @@ FileInputStream fis2 = new FileInputStream("D:\\OOP\\vtiger-crm-framework-A11\\s
 		Workbook wb = WorkbookFactory.create(fis2);
 
 		Sheet sh = wb.getSheet(sheetName);
-		double phnnum = sh.getRow(2).getCell(1).getNumericCellValue();
+		double phnnum = sh.getRow(rowNum).getCell(cellNum).getNumericCellValue();
 		long phnnumLong = (long) phnnum;
 		String phnnumString = String.valueOf(phnnumLong);
 	//	System.out.println(phnnumString);

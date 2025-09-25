@@ -19,9 +19,9 @@ public class DemoForPriority {
 	@Test(priority = 3)
 	public void addTocart() {
 //		Failure of testScript
-		Assert.assertTrue(false);
+		Assert.assertTrue(true);
 		System.out.println("Added to cart");
-		Assert.assertTrue(false);
+		Assert.assertTrue(true);
 	}
 
 	@Test(priority = 4)

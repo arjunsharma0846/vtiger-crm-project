@@ -1,77 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="1" total="4" passed="1" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-14T13:38:25 IST" name="Default suite" finished-at="2025-09-14T13:38:46 IST" duration-ms="20434">
+  <suite started-at="2025-09-23T14:37:03 IST" name="Default suite" finished-at="2025-09-23T14:37:03 IST" duration-ms="146">
     <groups>
     </groups>
-    <test started-at="2025-09-14T13:38:25 IST" name="Default test" finished-at="2025-09-14T13:38:46 IST" duration-ms="20434">
-      <class name="testNg_extra.SauceDemo">
-        <test-method signature="loginToSauceDemo(java.lang.String,java.lang.String)[pri:0, instance:testNg_extra.SauceDemo@6b2ea799]" started-at="2025-09-14T13:38:25 IST" name="loginToSauceDemo" data-provider="getData" finished-at="2025-09-14T13:38:30 IST" duration-ms="4757" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[standard_user]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauce]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2025-09-23T14:37:03 IST" name="Default test" finished-at="2025-09-23T14:37:03 IST" duration-ms="146">
+      <class name="testNg_extra.DemoForIgnoringTestCases">
+        <test-method signature="addTocart()[pri:0, instance:testNg_extra.DemoForIgnoringTestCases@3e694b3f]" started-at="2025-09-23T14:37:03 IST" name="addTocart" finished-at="2025-09-23T14:37:03 IST" duration-ms="35" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at testNg_extra.DemoForIgnoringTestCases.addTocart(DemoForIgnoringTestCases.java:22)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginToSauceDemo -->
-        <test-method signature="loginToSauceDemo(java.lang.String,java.lang.String)[pri:0, instance:testNg_extra.SauceDemo@6b2ea799]" started-at="2025-09-14T13:38:30 IST" name="loginToSauceDemo" data-provider="getData" finished-at="2025-09-14T13:38:33 IST" duration-ms="3221" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[locked_out_user]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauce]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- addTocart -->
+        <test-method signature="login()[pri:0, instance:testNg_extra.DemoForIgnoringTestCases@3e694b3f]" started-at="2025-09-23T14:37:03 IST" name="login" finished-at="2025-09-23T14:37:03 IST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginToSauceDemo -->
-        <test-method signature="loginToSauceDemo(java.lang.String,java.lang.String)[pri:0, instance:testNg_extra.SauceDemo@6b2ea799]" started-at="2025-09-14T13:38:33 IST" name="loginToSauceDemo" data-provider="getData" finished-at="2025-09-14T13:38:37 IST" duration-ms="3291" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[problem_user]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauce]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- login -->
+        <test-method signature="payment()[pri:0, instance:testNg_extra.DemoForIgnoringTestCases@3e694b3f]" started-at="2025-09-23T14:37:03 IST" name="payment" finished-at="2025-09-23T14:37:03 IST" depends-on-methods="testNg_extra.DemoForIgnoringTestCases.addTocart" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method testNg_extra.DemoForIgnoringTestCases.payment() on instance testNg_extra.DemoForIgnoringTestCases@3e694b3f depends on not successfully finished methods 
+[testNg_extra.DemoForIgnoringTestCases.addTocart() on instance testNg_extra.DemoForIgnoringTestCases@3e694b3f]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method testNg_extra.DemoForIgnoringTestCases.payment() on instance testNg_extra.DemoForIgnoringTestCases@3e694b3f depends on not successfully finished methods 
+[testNg_extra.DemoForIgnoringTestCases.addTocart() on instance testNg_extra.DemoForIgnoringTestCases@3e694b3f]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginToSauceDemo -->
-        <test-method signature="loginToSauceDemo(java.lang.String,java.lang.String)[pri:0, instance:testNg_extra.SauceDemo@6b2ea799]" started-at="2025-09-14T13:38:37 IST" name="loginToSauceDemo" data-provider="getData" finished-at="2025-09-14T13:38:46 IST" duration-ms="9088" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[performance_glitch_user]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauce]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginToSauceDemo -->
-      </class> <!-- testNg_extra.SauceDemo -->
+        </test-method> <!-- payment -->
+      </class> <!-- testNg_extra.DemoForIgnoringTestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
